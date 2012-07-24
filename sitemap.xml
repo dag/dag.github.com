@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://dag.github.com/blog/2012/07/24/latest-haskell-platform-on-fedora-17/</loc>
+        <lastmod>2012-07-24T20:40:44+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dag.github.com/</loc>
+        <lastmod>2012-07-24T20:40:44+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://dag.github.com/blog/archives/</loc>
+        <lastmod>2012-07-24T20:40:44+02:00</lastmod>
+    </url>
+</urlset>

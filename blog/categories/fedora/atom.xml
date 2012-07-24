@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Fedora | blog:donri]]></title>
+  <link href="http://dag.github.com/blog/categories/fedora/atom.xml" rel="self"/>
+  <link href="http://dag.github.com/"/>
+  <updated>2012-07-24T20:55:06+02:00</updated>
+  <id>http://dag.github.com/</id>
+  <author>
+    <name><![CDATA[Dag Odenhall]]></name>
+    <email><![CDATA[dag.odenhall@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Latest GHC on Fedora 17]]></title>
+    <link href="http://dag.github.com/blog/2012/07/24/latest-haskell-platform-on-fedora-17/"/>
+    <updated>2012-07-24T16:28:00+02:00</updated>
+    <id>http://dag.github.com/blog/2012/07/24/latest-haskell-platform-on-fedora-17</id>
+    <content type="html"><![CDATA[<p>Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4.
+To get the latest platform and GHC 7.4.1 you can install them from
+"rawhide" like this:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> sudo yum install fedora-release-rawhide
+</span><span class='line'><span class="gp">$</span> sudo yum --enablerepo rawhide install haskell-platform  <span class="c"># or &quot;ghc&quot;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This "rawhide" repository is what will eventually become Fedora 18.  If you
+use the commands above it will be enabled temporarily for the duration of
+that "yum install", but your system will be otherwise unaffected.</p>
+
+<p>Should you regret what you have done you can easily revert the
+installation:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> sudo yum distro-sync
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This will synchronize all your installed packages to the versions available
+in your enabled repositories (and "rawhide" is disabled by default).</p>
+]]></content>
+  </entry>
+  
+</feed>
