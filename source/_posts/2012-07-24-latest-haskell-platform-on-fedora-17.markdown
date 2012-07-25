@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Latest GHC on Fedora 17"
+title: "GHC 7.4 on Fedora 17"
 date: 2012-07-24 16:28
 comments: true
 categories: [Fedora, Haskell]
 ---
 
-*Updated in accordance with recommendations from juhp; see comments below.*
-
 Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4.
 To get the latest platform and GHC 7.4.1 you can install from the "rawhide"
 repository.
+
+<!-- more -->
 
 First make sure to install the packages you want from your
 normal repositories so as to avoid pulling a lot of dependencies from
@@ -36,4 +36,10 @@ installation:
     $ sudo yum distro-sync
 
 This will synchronize all your installed packages to the versions available
-in your *enabled* repositories.
+in your *enabled* repositories.  If this fails you might try removing all
+the haskell packages first:
+
+    $ sudo yum remove haskell-platform 'ghc-*'
+
+*Updated in accordance with recommendations from juhp; see comments below.
+Also updated with improved recovery method.*
