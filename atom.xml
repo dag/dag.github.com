@@ -4,7 +4,7 @@
   <title><![CDATA[blog:donri]]></title>
   <link href="http://dag.github.com/atom.xml" rel="self"/>
   <link href="http://dag.github.com/"/>
-  <updated>2012-07-24T21:13:06+02:00</updated>
+  <updated>2012-07-25T03:16:17+02:00</updated>
   <id>http://dag.github.com/</id>
   <author>
     <name><![CDATA[Dag Odenhall]]></name>
@@ -18,16 +18,27 @@
     <link href="http://dag.github.com/blog/2012/07/24/latest-haskell-platform-on-fedora-17/"/>
     <updated>2012-07-24T16:28:00+02:00</updated>
     <id>http://dag.github.com/blog/2012/07/24/latest-haskell-platform-on-fedora-17</id>
-    <content type="html"><![CDATA[<p>Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4.
-To get the latest platform and GHC 7.4.1 you can install them from
-&#8220;rawhide&#8221; like this:</p>
+    <content type="html"><![CDATA[<p><em>Updated in accordance with recommendations from juhp; see comments below.</em></p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> sudo yum install fedora-release-rawhide
-</span><span class='line'><span class="gp">$</span> sudo yum --enablerepo rawhide install haskell-platform  <span class="c"># or &quot;ghc&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4.
+To get the latest platform and GHC 7.4.1 you can install from the &#8220;rawhide&#8221;
+repository.</p>
 
+<p>First make sure to install the packages you want from your
+normal repositories so as to avoid pulling a lot of dependencies from
+rawhide:</p>
+
+<pre><code>$ sudo yum install haskell-platform
+</code></pre>
+
+<p>You may substitute <code>haskell-platform</code> for <code>ghc</code> if you don&#8217;t want the whole
+platform.  Next we install the repository description for rawhide.  It will
+be a disabled repository by default so we enable it temporarily and update
+the packages we want:</p>
+
+<pre><code>$ sudo yum install fedora-release-rawhide
+$ sudo yum --enablerepo rawhide update haskell-platform
+</code></pre>
 
 <p>This &#8220;rawhide&#8221; repository is what will eventually become Fedora 18.  If you
 use the commands above it will be enabled temporarily for the duration of
@@ -36,13 +47,11 @@ that &#8220;yum install&#8221;, but your system will be otherwise unaffected.</p
 <p>Should you regret what you have done you can easily revert the
 installation:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="gp">$</span> sudo yum distro-sync
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>$ sudo yum distro-sync
+</code></pre>
 
 <p>This will synchronize all your installed packages to the versions available
-in your enabled repositories (and &#8220;rawhide&#8221; is disabled by default).</p>
+in your <em>enabled</em> repositories.</p>
 ]]></content>
   </entry>
   
