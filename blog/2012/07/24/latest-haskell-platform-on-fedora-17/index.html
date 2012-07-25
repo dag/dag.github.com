@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Latest GHC on Fedora 17 - blog:donri</title>
+  <title>GHC 7.4 on Fedora 17 - blog:donri</title>
   <meta name="author" content="Dag Odenhall">
 
   
-  <meta name="description" content="Updated in accordance with recommendations from juhp; see comments below. Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4 &hellip;">
+  <meta name="description" content="Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4.
+To get the latest platform and GHC 7.4.1 you can install from the &#8220; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Latest GHC on Fedora 17</h1>
+      <h1 class="entry-title">GHC 7.4 on Fedora 17</h1>
     
     
       <p class="meta">
@@ -102,11 +103,12 @@
   </header>
 
 
-<div class="entry-content"><p><em>Updated in accordance with recommendations from juhp; see comments below.</em></p>
-
-<p>Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4.
+<div class="entry-content"><p>Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4.
 To get the latest platform and GHC 7.4.1 you can install from the &#8220;rawhide&#8221;
 repository.</p>
+
+<!-- more -->
+
 
 <p>First make sure to install the packages you want from your
 normal repositories so as to avoid pulling a lot of dependencies from
@@ -135,7 +137,14 @@ installation:</p>
 </code></pre>
 
 <p>This will synchronize all your installed packages to the versions available
-in your <em>enabled</em> repositories.</p>
+in your <em>enabled</em> repositories.  If this fails you might try removing all
+the haskell packages first:</p>
+
+<pre><code>$ sudo yum remove haskell-platform 'ghc-*'
+</code></pre>
+
+<p><em>Updated in accordance with recommendations from juhp; see comments below.
+Also updated with improved recovery method.</em></p>
 </div>
 
 
@@ -203,7 +212,7 @@ in your <em>enabled</em> repositories.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/07/24/latest-haskell-platform-on-fedora-17/">Latest GHC on Fedora 17</a>
+        <a href="/blog/2012/07/24/latest-haskell-platform-on-fedora-17/">GHC 7.4 on Fedora 17</a>
       </li>
     
   </ul>

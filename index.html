@@ -9,7 +9,8 @@
   <meta name="author" content="Dag Odenhall">
 
   
-  <meta name="description" content="Updated in accordance with recommendations from juhp; see comments below. Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4 &hellip;">
+  <meta name="description" content="Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4.
+To get the latest platform and GHC 7.4.1 you can install from the &#8220; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,7 +83,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/07/24/latest-haskell-platform-on-fedora-17/">Latest GHC on Fedora 17</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/07/24/latest-haskell-platform-on-fedora-17/">GHC 7.4 on Fedora 17</a></h1>
     
     
       <p class="meta">
@@ -105,42 +106,16 @@
   </header>
 
 
-  <div class="entry-content"><p><em>Updated in accordance with recommendations from juhp; see comments below.</em></p>
-
-<p>Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4.
+  <div class="entry-content"><p>Fedora 17 ships the previous release of the Haskell Platform and GHC 7.0.4.
 To get the latest platform and GHC 7.4.1 you can install from the &#8220;rawhide&#8221;
 repository.</p>
 
-<p>First make sure to install the packages you want from your
-normal repositories so as to avoid pulling a lot of dependencies from
-rawhide:</p>
-
-<pre><code>$ sudo yum install haskell-platform
-</code></pre>
-
-<p>You may substitute <code>haskell-platform</code> for <code>ghc</code> if you don&#8217;t want the whole
-platform.  Next we install the repository description for rawhide.  It will
-be a disabled repository by default so we enable it temporarily and update
-the packages we want:</p>
-
-<pre><code>$ sudo yum install fedora-release-rawhide
-$ sudo yum --enablerepo rawhide update haskell-platform
-</code></pre>
-
-<p>This &#8220;rawhide&#8221; repository is what will eventually become Fedora 18.  If you
-use the commands above it will be enabled temporarily for the duration of
-that &#8220;yum install&#8221;, but your system will be otherwise unaffected.</p>
-
-<p>Should you regret what you have done you can easily revert the
-installation:</p>
-
-<pre><code>$ sudo yum distro-sync
-</code></pre>
-
-<p>This will synchronize all your installed packages to the versions available
-in your <em>enabled</em> repositories.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/07/24/latest-haskell-platform-on-fedora-17/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -159,7 +134,7 @@ in your <em>enabled</em> repositories.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/07/24/latest-haskell-platform-on-fedora-17/">Latest GHC on Fedora 17</a>
+        <a href="/blog/2012/07/24/latest-haskell-platform-on-fedora-17/">GHC 7.4 on Fedora 17</a>
       </li>
     
   </ul>
