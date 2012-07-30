@@ -21,7 +21,7 @@ So I decided to do something about it.
 
     $ cd ~/.mozilla/firefox/*.default
     $ mkdir chrome
-    $ vim chrome/user/userContent.css
+    $ vim chrome/userContent.css
 
 {% codeblock lang:css %}
 a:hover, a:active { outline: none; }
