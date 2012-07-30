@@ -4,7 +4,7 @@
   <title><![CDATA[blog:donri]]></title>
   <link href="http://dag.github.com/atom.xml" rel="self"/>
   <link href="http://dag.github.com/"/>
-  <updated>2012-07-25T03:49:23+02:00</updated>
+  <updated>2012-07-30T23:39:19+02:00</updated>
   <id>http://dag.github.com/</id>
   <author>
     <name><![CDATA[Dag Odenhall]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Nice User Styles for Firefox]]></title>
+    <link href="http://dag.github.com/blog/2012/07/30/nice-user-styles-for-firefox/"/>
+    <updated>2012-07-30T23:30:00+02:00</updated>
+    <id>http://dag.github.com/blog/2012/07/30/nice-user-styles-for-firefox</id>
+    <content type="html"><![CDATA[<p>Two things annoy me when browsing the web:</p>
+
+<ul>
+<li>The outline given to focused elements is a useful hint from an
+accessibility perspective, such as for keyboard navigation, but in
+Firefox it&#8217;s even displayed when you click a link with the mouse.</li>
+<li>Textareas with a proportional font.  I often input code, for example when
+commenting on reddit or on GitHub issues.  A fixed-width font is much
+better for these situations.</li>
+</ul>
+
+
+<p>So I decided to do something about it.</p>
+
+<!-- more -->
+
+
+<pre><code>$ cd ~/.mozilla/firefox/*.default
+$ mkdir chrome
+$ vim chrome/user/userContent.css
+</code></pre>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">a</span><span class="nd">:hover</span><span class="o">,</span> <span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span> <span class="k">outline</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="nt">textarea</span> <span class="p">{</span> <span class="k">font-family</span><span class="o">:</span> <span class="k">monospace</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[GHC 7.4 on Fedora 17]]></title>
