@@ -4,7 +4,7 @@
   <title><![CDATA[blog:donri]]></title>
   <link href="http://dag.github.com/atom.xml" rel="self"/>
   <link href="http://dag.github.com/"/>
-  <updated>2012-07-30T23:44:14+02:00</updated>
+  <updated>2012-08-03T23:08:53+02:00</updated>
   <id>http://dag.github.com/</id>
   <author>
     <name><![CDATA[Dag Odenhall]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Writing Images to Flash Drives]]></title>
+    <link href="http://dag.github.com/blog/2012/08/03/writing-images-to-flash-drives/"/>
+    <updated>2012-08-03T22:36:00+02:00</updated>
+    <id>http://dag.github.com/blog/2012/08/03/writing-images-to-flash-drives</id>
+    <content type="html"><![CDATA[<p>It seems odd that there are no obvious ways to write a disk image to a USB
+flash drive from a Linux system, when there are so many options for burning
+images to a CD.  I often find myself wanting to run a &#8220;Live CD&#8221; and using a
+flash drive instead is both faster and less wasteful.</p>
+
+<!-- more -->
+
+
+<p>So we have to resort to low-level tools like <code>dd</code>:</p>
+
+<pre><code>$ sudo dd if=Fedora-17-x86_64-Live-Desktop.iso of=/dev/sdh bs=8M conv=fsync
+</code></pre>
+
+<p>This is assuming your USB flash drive is the <code>/dev/sdh</code> device; you can
+find out with <code>dmesg</code> or a tool like GNOME&#8217;s &#8220;Disks&#8221; utility.</p>
+
+<p>So this works, but there&#8217;s not a whole lot of feedback.  The <code>dd</code> program
+is like that.  The man page suggests we can get it to print some statistics
+by sending the USR1 signal to it.  Hokay.  Need to open a new terminal for
+this!</p>
+
+<pre><code>$ pkill -USR1 ^dd$
+</code></pre>
+
+<p>Cool!  But wouldn&#8217;t it be nice if <code>dd</code> had a progress bar or somesuch,
+without requiring a new terminal just to get some feedback?  Enter <code>pv</code>.</p>
+
+<pre><code>$ sudo yum install pv
+$ pv Fedora-17-x86_64-Live-Desktop.iso | sudo dd of=/dev/sdh bs=8M conv=fsync
+</code></pre>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Nice User Styles for Firefox]]></title>
